@@ -1,0 +1,15 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: MYSERVICE
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    serviceUrl:
+    # 注册中心地址
+      defaultZone: ${EUREKA_DEFAULT_ZONE:http://dev.hzero.org:8000/eureka}
+    registryFetchIntervalSeconds: 10
+    disable-delta: true
